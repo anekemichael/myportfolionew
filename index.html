@@ -391,27 +391,27 @@
 
                         <div class="col-md-8 col-md-offset-2">
                             <div class="row">
-                                <form name="contactForm" id='contact_form' class="s1" method="post" action='https://www.designesia.com/themes/profession/email.php'>
+                                <form name="contactForm" id='contact_form' class="s1">
                                     <div class="col-md-6">
                                         <div class="field-set">
-                                            <input type='text' name='name' id='name' class="form-control" placeholder="Your Name">
+                                            <input type='text' name='from_name' required id='from_name' class="form-control" placeholder="Your Name">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='email' id='email' class="form-control" placeholder="Your Email">
+                                            <input type='text' name='email_id' required id='email_id' class="form-control" placeholder="Your Email">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone">
+                                            <input type='text' name='phone' required id='phone' class="form-control" placeholder="Your Phone">
                                             <div class="line-fx"></div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="field-set">
-                                            <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
+                                            <textarea name='message' id='message' required class="form-control" placeholder="Your Message"></textarea>
                                             <div class="line-fx"></div>
                                         </div>
                                     </div>
@@ -420,10 +420,10 @@
 
                                     <div class="col-md-12 text-center">
                                         <div id='submit'>
-                                            <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom">
+                                            <input type='submit' id='button' value='Submit Form' class="btn btn-custom">
                                         </div>
-                                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                        <div id='mail_success' style="display: none;" class='success'>Your message has been sent successfully.</div>
+                                        <div id='mail_fail' style="display: none;" class='error'>Sorry, error occured this time sending your message.</div>
                                     </div>
                                 </form>
                             </div>
@@ -518,6 +518,11 @@
     <script src="js/typed.js"></script>
     <script src="js/typed-custom.js"></script>
     <script src="js/designesia.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('OaIzMatr7XjPBPaab')
+    </script>
 
 </body>
 
